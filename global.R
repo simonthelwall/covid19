@@ -53,7 +53,7 @@ dat_long <- dat_long %>%
 
 from_death <- getURL("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv")
 dat_death <- read.csv(text = from_death, stringsAsFactors = FALSE) %>%
-  pipe_nice_names()
+  clean_names()
 
 dat_death_long <- dat_death %>%
   select(-long, -lat, -province_state) %>%
@@ -78,7 +78,7 @@ dat_death_long <- dat_death_long %>%
 
 from_recov <- getURL("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv")
 dat_recov <- read.csv(text = from_recov, stringsAsFactors = FALSE) %>%
-  pipe_nice_names()
+  clean_names()
 dat_recov_long <- dat_recov %>%
   select(-long, -lat, -province_state) %>%
   pivot_longer(names_to = "date", -country_region)
