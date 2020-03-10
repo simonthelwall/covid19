@@ -10,8 +10,8 @@ sidebarLayout(
     tabPanel("Background and notes", fluid = TRUE, 
              sidebarLayout(
                sidebarPanel(width = 2,
-                 p("Created by Simon Thelwall"),
-                 p("Code available at")
+                 p("Created by ", a(href="https://orcid.org/0000-0002-0434-2724", "Simon Thelwall")),
+                 p("Code available at", a(href="https://github.com/simonthelwall/covid19", "github.com/"))
                ), 
                mainPanel(
                  h1("Introduction"),
