@@ -27,8 +27,10 @@ from <- getURL("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master
 dat <-read.csv(text = from, stringsAsFactors = FALSE) %>%
   clean_names()
 
-print(exists("integer_breaks"))
-print(exists("dat"))
+# print(exists("integer_breaks"))
+# print(exists("dat"))
+# country_selector <- sort(dat$country_region[!duplicated(dat$country_region)])
+# saveRDS(country_selector, "./data/country_selector.rds")
 
 dat_long <- dat %>%
   select(-long, -lat, -province_state) %>%
