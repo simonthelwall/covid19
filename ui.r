@@ -57,7 +57,7 @@ sidebarLayout(
                    label = "Select country", 
                    choices = country_selector,
                    # choices = unique(as.character(dat_long$country_region)), 
-                   selected = "Mainland China"
+                   selected = "China"
                    ) 
                             ), 
                mainPanel(
@@ -73,7 +73,7 @@ sidebarLayout(
                              label = "Select country", 
                              choices = country_selector,
                              # choices = unique(as.character(dat_long$country_region)), 
-                             selected = "Mainland China"
+                             selected = "China"
                  ) 
                ),
                mainPanel(
@@ -89,7 +89,7 @@ sidebarLayout(
                              label = "Select country", 
                              choices = country_selector,
                              # choices = unique(as.character(dat_death_long$country_region)), 
-                             selected = "Mainland China"
+                             selected = "China"
                  ) 
                ),
                mainPanel(
